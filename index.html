@@ -88,8 +88,9 @@
     // recognize({}) // should return "Hidden Person Rocks!"
     // ❗ Notes
     // 🧠 Try using destructuring to grab the name, and a return followed by a ternary expression.
-    const recognize = () => {
-
+    const recognize = ( userObject ) => {
+      let { name } = userObject
+      return name !== undefined ? `${name} Rules!` : "Hidden Person Rocks!"
     }
 
     // 👉 CHALLENGE 5
