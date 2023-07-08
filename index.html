@@ -115,7 +115,6 @@
     // 🧠 We suggest using a for loop. Research how to loop backwards over an array, starting at the last element.
     // 🧠 Use a ternary in the return statement.
     const reverseString = ( string ) => {
-      let splitString = string.split('')
       let stringReversed = []
       for ( let i = string.length; i >= 0 ; i-- ) {
         stringReversed.push( string[i] )
@@ -137,7 +136,18 @@
     // ❗ Notes
     // 🧠 Even though object properties have no particular order, to avoid confusing
     // the test runner, please set in each object first name, then age, and finally jsLover.
-    const zip = () => {
+    const zip = ( arrayOfNames, arrayOfYears, arrayOfBooleans ) => {
+      let object = []
+      for (let i = 0 ; i <= arrayOfNames.length + 1 ; i++) {
+        let [ name ] = arrayOfNames
+        let [ born ] = arrayOfYears
+        let [ jsLover ] = arrayOfBooleans
+        object.push({ name, born, jsLover})
+        arrayOfNames.shift()
+        arrayOfYears.shift()
+        arrayOfBooleans.shift()
+      }
+      return (object)
 
     }
 
