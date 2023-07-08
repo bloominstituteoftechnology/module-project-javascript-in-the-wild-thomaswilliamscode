@@ -71,8 +71,12 @@
     // devGreet(false, false) // should return "Hey, I am a backend dev and I am sad"
     // ❗ Notes
     // 🧠 Use ternary expressions to construct the string.
-    const devGreet = () => {
-
+    const devGreet = ( isFrontend, isHappy ) => {
+      if ( isFrontend ) {
+        return isHappy ? "Hey, I am a frontend dev and I am happy" : "Hey, I am a frontend dev and I am sad"
+      } else {
+        return isHappy ? "Hey, I am a backend dev and I am happy" : "Hey, I am a backend dev and I am sad"
+      }
     }
 
     // 👉 CHALLENGE 4
